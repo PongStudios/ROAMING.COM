@@ -5,10 +5,10 @@ public class DanielaTextInteraction : TextInteraction
 {
     public void ActivateLayerText(string textKey)
     {
-            ActivateText(textKey);
+        ActivateText(textKey);
     }
 
-    public void DeactivateAllTexts()
+    public new void DeactivateAllTexts()
     {
         base.DeactivateAllTexts();
     }

@@ -7,7 +7,7 @@ public class IngeTextInteraction : TextInteraction
     {
         ActivateText(textKey);
     }
-    public void DeactivateAllTexts()
+    public new void DeactivateAllTexts()
     {
         base.DeactivateAllTexts();
     }
