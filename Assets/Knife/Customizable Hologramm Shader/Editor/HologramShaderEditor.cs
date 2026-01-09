@@ -693,23 +693,23 @@ namespace Knife.HologramEffect
         private void DrawProperty(MaterialProperty property)
         {
             string propName = property.displayName;
-            switch (property.type)
+            switch (property.propertyType)
             {
-                case MaterialProperty.PropType.Color:
+                case UnityEngine.Rendering.ShaderPropertyType.Color:
                     materialEditor.ColorProperty(property, propName);
                     break;
-                case MaterialProperty.PropType.Float:
+                case UnityEngine.Rendering.ShaderPropertyType.Float:
                     materialEditor.FloatProperty(property, propName);
                     break;
-                case MaterialProperty.PropType.Range:
+                case UnityEngine.Rendering.ShaderPropertyType.Range:
                     materialEditor.RangeProperty(property, propName);
                     break;
-                case MaterialProperty.PropType.Texture:
+                case UnityEngine.Rendering.ShaderPropertyType.Texture:
                     materialEditor.TexturePropertySingleLine(new GUIContent(propName), property);
-                    if(!property.flags.HasFlag((System.Enum)MaterialProperty.PropFlags.NoScaleOffset))
+                    if(!property.propertyFlags.HasFlag((System.Enum)UnityEngine.Rendering.ShaderPropertyFlags.NoScaleOffset))
                         materialEditor.TextureScaleOffsetProperty(property);
                     break;
-                case MaterialProperty.PropType.Vector:
+                case UnityEngine.Rendering.ShaderPropertyType.Vector:
                     materialEditor.VectorProperty(property, propName);
                     break;
             }
